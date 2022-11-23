@@ -1,0 +1,13 @@
+.btnE{
+    color:grey;
+    background-color: none;
+    border-color: gray;
+    font-size:medium;
+    text-align: center;
+  }
+
+  .btnE:hover{
+    background-color: rgb(33, 153, 232);
+    color:aliceblue;
+    border-color: aliceblue;
+  }

@@ -1,0 +1,65 @@
+<div
+  class="container--search bg-light border-bottom border-dark"
+  style="height: 12rem; margin-bottom: 10px"
+>
+  <div class="container">
+    <div class="d-block p-1 d-flex justify-content-center">
+      <h1 class="display-4">PRUEBA BOLSIYO</h1>
+    </div>
+    <div class="d-block d-flex justify-content-center">
+      <p><em>Prueba Front End con Angular Framework</em></p>
+    </div>
+
+    <div class="d-block d-flex justify-content-center">
+    <div *ngIf="getInputText().invalid">
+      <div *ngIf="getInputText().errors?.['maxlength']">
+        <div class="aE alert p-1 position-absolute start-50 translate-middle" role="alert">
+          La busqueda no puede exceder de 100 caracteres!
+        </div>
+      </div>
+    </div></div>
+
+    <div class="d-block p-1 d-flex justify-content-center">
+      <div class="d-flex justify-content-center">
+        <form [formGroup]="formSearch" (submit)="toSearch()">
+          <div
+            class="container d-flex justify-content-center align-items-center"
+          >
+            <input
+              type="text"
+              id="search"
+              name="search"
+              class="inputE form-control-lg border-secundary border rounded-pill"
+              placeholder="Buscar imagenes"
+              formControlName="search"
+            />
+
+            <button
+              type="submit"
+              class="btnE btn btn-light btn-lg text-secundary rounded-pill border-secundary border"
+              [disabled]="formSearch.invalid"
+            >
+              BUSCAR
+            </button>
+
+            <select
+              class="form-select-lg text-dark border border-secundary rounded-pill mx-5"
+              aria-label=".form-select-lg example"
+              (change)="changeCategory($event)"
+              formControlName="category"
+            >
+              <option selected value="">
+                <p><em>Filtrar Por Categoria</em></p>
+              </option>
+              <option value="education"><em>Educación</em></option>
+              <option value="people"><em>Personas</em></option>
+              <option value="feelings"><em>Sentimientos</em></option>
+              <option value="computer"><em>Computación</em></option>
+              <option value="builder"><em>Construcciones</em></option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

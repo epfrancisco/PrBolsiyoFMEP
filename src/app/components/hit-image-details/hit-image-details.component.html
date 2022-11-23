@@ -1,0 +1,56 @@
+<div class="container">
+  
+  <div class="align-self-center p-lg-5 m-auto">
+    <div class="d-flex align-content-start">
+      <a class="btnE btn " (click)="onClic()">REGRESAR</a>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col mt-5">
+        <div class="card mb-3" style="max-width: 1200px; max-height: 1200px">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img
+                src="{{ hit?.largeImageURL }}"
+                class="img-fluid h-100 rounded-start"
+                alt="..."
+              />
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <div class="d-flex flex-column bd-highlight mb-3">
+
+                  <div class="py-4 bd-highlight j">
+                    <h3 class="card-title text-lg-start display-5 ">Usuario: {{ hit?.user }}</h3>
+                    <small class="text-muted mx-2"><b>Id de usuario:</b> {{hit?.user_id}}</small>
+                  </div>
+                  <div class="p-2 bd-highlight">
+                    <p class="card-text">
+                      
+                    </p>
+                  </div>
+                  <div class="p-2 bd-highlight">
+                    <p class="card-text">
+                      <em><b>Etiquetas:</b></em> {{ hit?.tags }}
+                    </p>
+                  </div>
+                  <div class="p-2 bd-highlight">
+                    
+                    <p class="card-text">
+                      <em><b>Cantidad de vistas:</b></em> {{ hit?.views }}
+                     </p>
+                  </div>
+                  <div class="p-2 bd-highlight">
+                     <p class="card-text">
+                      <em><b>Cantidad de Me Gusta:</b></em> {{ hit?.likes }}
+                     </p>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

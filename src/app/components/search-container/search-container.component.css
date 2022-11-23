@@ -1,0 +1,41 @@
+::placeholder {
+    color: grey;
+    font-size:medium;
+    text-align: center;
+  }
+
+  .inputE{
+    width: 500px;
+    font-style:normal;
+   
+  }
+
+
+  .btnE{
+    color: grey;
+    font-size:medium;
+    text-align: center;
+  }
+
+  .btnE:hover{
+    background-color: rgb(33, 153, 232);
+    color:aliceblue;
+  }
+ 
+
+  option,select{
+    color: rgb(67, 67, 67);
+    font-size:medium;
+  }
+
+ 
+ 
+
+  .aE{
+    background-color: white;
+    color: red;
+    box-shadow: red;
+  }
+
+
+  

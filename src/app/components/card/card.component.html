@@ -1,0 +1,27 @@
+<div class="row rounded border-top border-3 pt-lg-3 mt-5">
+  <div
+    class="card bg-light mb-lg-2 m-auto"
+    style="width: 15rem; height: 15rem"
+    *ngFor="
+      let hit of hits$
+        | async
+        | paginate: { itemsPerPage: 5, currentPage: page }
+    "
+  >
+    <img
+      id="{{ hit.id }}"
+      src="{{ hit.webformatURL }}"
+      class="card-img-top hover-overlay ripple shadow-1-strong"
+      width="100%"
+      height="100%"
+      (click)="detailCard(this.hit.id)"
+    />
+  </div>
+  <div class="d-flex justify-content-center align-items-center mt-5">
+    <pagination-controls
+      (pageChange)="page = $event"
+      previousLabel="Anterior"
+      nextLabel="Siguiente"
+    ></pagination-controls>
+  </div>
+</div>
